@@ -1,0 +1,34 @@
+# G1 Walking Controller (python/pytorch/C++) — Python 3.13 + CUDA 12.6
+# mjlab 환경 기반: MuJoCo + PyTorch + MuJoCo-Warp
+#
+# conda activate frjoco
+# pip install -r requirements.txt
+
+# ── PyTorch (CUDA 12.6) ──
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch>=2.7.0
+
+# ── MuJoCo + MuJoCo-Warp ──
+mujoco>=3.5.0
+mujoco-warp>=3.5.0
+
+# ── NVIDIA Warp ──
+--extra-index-url https://pypi.nvidia.com
+warp-lang>=1.12.0.dev
+
+# ── mjlab ──
+mjlab>=1.1.0
+
+# ── QP solver (로컬: pip install -e ReLUQP-py/) ──
+-e ./ReLUQP-py
+
+# ── pinocchio ──
+pin
+
+# ── 수치/과학 ──
+numpy
+scipy
+
+# ── 유틸리티 ──
+matplotlib
+tqdm
